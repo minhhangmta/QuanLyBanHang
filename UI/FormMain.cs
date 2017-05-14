@@ -15,10 +15,12 @@ namespace QuanLyBanHang
     {
 
         private UCStaff ucStaff;
+        private UCCustomer ucCustomer;
         public FormMain()
         {
             InitializeComponent();
             ucStaff = new UCStaff();
+            ucCustomer = new UCCustomer();
         }
 
         public void AddNewTab(UserControl userControl)
@@ -55,10 +57,7 @@ namespace QuanLyBanHang
 
         private void tabControl_MouseDown(object sender, MouseEventArgs e)
         {
-            if (this.tabControl.TabPages.Count <= 0)
-            {
-                return;
-            }
+
             Rectangle r = tabControl.GetTabRect(this.tabControl.SelectedIndex);
             Rectangle closeButton = new Rectangle(r.Right - 15, r.Top + 4, 9, 7);
             if (closeButton.Contains(e.Location))
@@ -71,6 +70,11 @@ namespace QuanLyBanHang
         private void nhânViênToolStripMenuItem_Click(object sender, EventArgs e)
         {
             AddNewTab(ucStaff);
+        }
+
+        private void btnCustomer_Click(object sender, EventArgs e)
+        {
+            AddNewTab(ucCustomer);
         }
     }
 }

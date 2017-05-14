@@ -59,11 +59,17 @@
       <Column Name="Unit" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
       <Column Name="PriceImport" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
       <Column Name="PriceExport" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
-      <Column Name="NumberOfStall" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
-      <Column Name="NumberOfRepository" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
       <Column Name="IdStall" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Association Name="Product_BillDetail" Member="BillDetails" ThisKey="Id" OtherKey="IdProduct" Type="BillDetail" />
       <Association Name="Product_ImportDetail" Member="ImportDetails" ThisKey="Id" OtherKey="IdProduct" Type="ImportDetail" />
+      <Association Name="Product_Reponsitory" Member="Reponsitory" ThisKey="Id" OtherKey="IdProduct" Type="Reponsitory" Cardinality="One" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Reponsitory" Member="Reponsitories">
+    <Type Name="Reponsitory">
+      <Column Name="IdProduct" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Quantity" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Product_Reponsitory" Member="Product" ThisKey="IdProduct" OtherKey="Id" Type="Product" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.Staff" Member="Staffs">

@@ -34,7 +34,7 @@
             this.nhânViênToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnCustomer = new System.Windows.Forms.ToolStripMenuItem();
             this.btnProduct = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnResponsitory = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnReponsitory = new System.Windows.Forms.ToolStripMenuItem();
             this.tácVuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnBill = new System.Windows.Forms.ToolStripMenuItem();
             this.btnImport = new System.Windows.Forms.ToolStripMenuItem();
@@ -77,7 +77,7 @@
             this.nhânViênToolStripMenuItem,
             this.btnCustomer,
             this.btnProduct,
-            this.btnResponsitory});
+            this.btnReponsitory});
             this.danhMụcToolStripMenuItem.Image = global::QuanLyBanHang.Properties.Resources.book;
             this.danhMụcToolStripMenuItem.Name = "danhMụcToolStripMenuItem";
             this.danhMụcToolStripMenuItem.Size = new System.Drawing.Size(90, 20);
@@ -97,6 +97,7 @@
             this.btnCustomer.Name = "btnCustomer";
             this.btnCustomer.Size = new System.Drawing.Size(152, 22);
             this.btnCustomer.Text = "Khách hàng";
+            this.btnCustomer.Click += new System.EventHandler(this.btnCustomer_Click);
             // 
             // btnProduct
             // 
@@ -105,12 +106,12 @@
             this.btnProduct.Size = new System.Drawing.Size(152, 22);
             this.btnProduct.Text = "Sản phẩm";
             // 
-            // btnResponsitory
+            // btnReponsitory
             // 
-            this.btnResponsitory.Image = global::QuanLyBanHang.Properties.Resources.Shipping6;
-            this.btnResponsitory.Name = "btnResponsitory";
-            this.btnResponsitory.Size = new System.Drawing.Size(152, 22);
-            this.btnResponsitory.Text = "Kho hàng";
+            this.btnReponsitory.Image = global::QuanLyBanHang.Properties.Resources.Shipping6;
+            this.btnReponsitory.Name = "btnReponsitory";
+            this.btnReponsitory.Size = new System.Drawing.Size(152, 22);
+            this.btnReponsitory.Text = "Kho hàng";
             // 
             // tácVuToolStripMenuItem
             // 
@@ -127,21 +128,21 @@
             // 
             this.btnBill.Image = global::QuanLyBanHang.Properties.Resources.Sales_by_Payment_Method_rep;
             this.btnBill.Name = "btnBill";
-            this.btnBill.Size = new System.Drawing.Size(152, 22);
+            this.btnBill.Size = new System.Drawing.Size(134, 22);
             this.btnBill.Text = "Hóa đơn";
             // 
             // btnImport
             // 
             this.btnImport.Image = global::QuanLyBanHang.Properties.Resources.move_file_arrow_import_left_document;
             this.btnImport.Name = "btnImport";
-            this.btnImport.Size = new System.Drawing.Size(152, 22);
+            this.btnImport.Size = new System.Drawing.Size(134, 22);
             this.btnImport.Text = "Phiếu nhập";
             // 
             // btnExport
             // 
             this.btnExport.Image = global::QuanLyBanHang.Properties.Resources.export;
             this.btnExport.Name = "btnExport";
-            this.btnExport.Size = new System.Drawing.Size(152, 22);
+            this.btnExport.Size = new System.Drawing.Size(134, 22);
             this.btnExport.Text = "Phiếu xuất";
             // 
             // thốngKêToolStripMenuItem
@@ -160,20 +161,20 @@
             // 
             this.btnStatisByDay.Image = global::QuanLyBanHang.Properties.Resources.calendar_icon_1487803_960_720;
             this.btnStatisByDay.Name = "btnStatisByDay";
-            this.btnStatisByDay.Size = new System.Drawing.Size(152, 22);
+            this.btnStatisByDay.Size = new System.Drawing.Size(135, 22);
             this.btnStatisByDay.Text = "Theo ngày";
             // 
             // btnStatisByMonth
             // 
             this.btnStatisByMonth.Image = global::QuanLyBanHang.Properties.Resources.calendar_selection_day_icon;
             this.btnStatisByMonth.Name = "btnStatisByMonth";
-            this.btnStatisByMonth.Size = new System.Drawing.Size(152, 22);
+            this.btnStatisByMonth.Size = new System.Drawing.Size(135, 22);
             this.btnStatisByMonth.Text = "Theo tháng";
             // 
             // theoQuýToolStripMenuItem
             // 
             this.theoQuýToolStripMenuItem.Name = "theoQuýToolStripMenuItem";
-            this.theoQuýToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.theoQuýToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
             this.theoQuýToolStripMenuItem.Text = "Theo quý";
             // 
             // btnStatisByYear
@@ -181,7 +182,7 @@
             this.btnStatisByYear.Image = global::QuanLyBanHang.Properties.Resources.Calender_2017;
             this.btnStatisByYear.Name = "btnStatisByYear";
             this.btnStatisByYear.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnStatisByYear.Size = new System.Drawing.Size(152, 22);
+            this.btnStatisByYear.Size = new System.Drawing.Size(135, 22);
             this.btnStatisByYear.Text = "Theo năm";
             // 
             // FormMain
@@ -211,7 +212,7 @@
         private System.Windows.Forms.ToolStripMenuItem nhânViênToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem btnCustomer;
         private System.Windows.Forms.ToolStripMenuItem btnProduct;
-        private System.Windows.Forms.ToolStripMenuItem btnResponsitory;
+        private System.Windows.Forms.ToolStripMenuItem btnReponsitory;
         private System.Windows.Forms.ToolStripMenuItem btnBill;
         private System.Windows.Forms.ToolStripMenuItem btnImport;
         private System.Windows.Forms.ToolStripMenuItem btnExport;

@@ -48,6 +48,9 @@ namespace QuanLyBanHang.DAL
     partial void InsertProduct(Product instance);
     partial void UpdateProduct(Product instance);
     partial void DeleteProduct(Product instance);
+    partial void InsertReponsitory(Reponsitory instance);
+    partial void UpdateReponsitory(Reponsitory instance);
+    partial void DeleteReponsitory(Reponsitory instance);
     partial void InsertStaff(Staff instance);
     partial void UpdateStaff(Staff instance);
     partial void DeleteStaff(Staff instance);
@@ -131,6 +134,14 @@ namespace QuanLyBanHang.DAL
 			get
 			{
 				return this.GetTable<Product>();
+			}
+		}
+		
+		public System.Data.Linq.Table<Reponsitory> Reponsitories
+		{
+			get
+			{
+				return this.GetTable<Reponsitory>();
 			}
 		}
 		
@@ -1234,15 +1245,13 @@ namespace QuanLyBanHang.DAL
 		
 		private decimal _PriceExport;
 		
-		private double _NumberOfStall;
-		
-		private double _NumberOfRepository;
-		
 		private int _IdStall;
 		
 		private EntitySet<BillDetail> _BillDetails;
 		
 		private EntitySet<ImportDetail> _ImportDetails;
+		
+		private EntityRef<Reponsitory> _Reponsitory;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -1260,10 +1269,6 @@ namespace QuanLyBanHang.DAL
     partial void OnPriceImportChanged();
     partial void OnPriceExportChanging(decimal value);
     partial void OnPriceExportChanged();
-    partial void OnNumberOfStallChanging(double value);
-    partial void OnNumberOfStallChanged();
-    partial void OnNumberOfRepositoryChanging(double value);
-    partial void OnNumberOfRepositoryChanged();
     partial void OnIdStallChanging(int value);
     partial void OnIdStallChanged();
     #endregion
@@ -1272,6 +1277,7 @@ namespace QuanLyBanHang.DAL
 		{
 			this._BillDetails = new EntitySet<BillDetail>(new Action<BillDetail>(this.attach_BillDetails), new Action<BillDetail>(this.detach_BillDetails));
 			this._ImportDetails = new EntitySet<ImportDetail>(new Action<ImportDetail>(this.attach_ImportDetails), new Action<ImportDetail>(this.detach_ImportDetails));
+			this._Reponsitory = default(EntityRef<Reponsitory>);
 			OnCreated();
 		}
 		
@@ -1395,46 +1401,6 @@ namespace QuanLyBanHang.DAL
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NumberOfStall", DbType="Float NOT NULL")]
-		public double NumberOfStall
-		{
-			get
-			{
-				return this._NumberOfStall;
-			}
-			set
-			{
-				if ((this._NumberOfStall != value))
-				{
-					this.OnNumberOfStallChanging(value);
-					this.SendPropertyChanging();
-					this._NumberOfStall = value;
-					this.SendPropertyChanged("NumberOfStall");
-					this.OnNumberOfStallChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NumberOfRepository", DbType="Float NOT NULL")]
-		public double NumberOfRepository
-		{
-			get
-			{
-				return this._NumberOfRepository;
-			}
-			set
-			{
-				if ((this._NumberOfRepository != value))
-				{
-					this.OnNumberOfRepositoryChanging(value);
-					this.SendPropertyChanging();
-					this._NumberOfRepository = value;
-					this.SendPropertyChanged("NumberOfRepository");
-					this.OnNumberOfRepositoryChanged();
-				}
-			}
-		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IdStall", DbType="Int NOT NULL")]
 		public int IdStall
 		{
@@ -1481,6 +1447,35 @@ namespace QuanLyBanHang.DAL
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Product_Reponsitory", Storage="_Reponsitory", ThisKey="Id", OtherKey="IdProduct", IsUnique=true, IsForeignKey=false)]
+		public Reponsitory Reponsitory
+		{
+			get
+			{
+				return this._Reponsitory.Entity;
+			}
+			set
+			{
+				Reponsitory previousValue = this._Reponsitory.Entity;
+				if (((previousValue != value) 
+							|| (this._Reponsitory.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Reponsitory.Entity = null;
+						previousValue.Product = null;
+					}
+					this._Reponsitory.Entity = value;
+					if ((value != null))
+					{
+						value.Product = this;
+					}
+					this.SendPropertyChanged("Reponsitory");
+				}
+			}
+		}
+		
 		public event PropertyChangingEventHandler PropertyChanging;
 		
 		public event PropertyChangedEventHandler PropertyChanged;
@@ -1523,6 +1518,133 @@ namespace QuanLyBanHang.DAL
 		{
 			this.SendPropertyChanging();
 			entity.Product = null;
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Reponsitory")]
+	public partial class Reponsitory : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _IdProduct;
+		
+		private int _Quantity;
+		
+		private EntityRef<Product> _Product;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnIdProductChanging(int value);
+    partial void OnIdProductChanged();
+    partial void OnQuantityChanging(int value);
+    partial void OnQuantityChanged();
+    #endregion
+		
+		public Reponsitory()
+		{
+			this._Product = default(EntityRef<Product>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IdProduct", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int IdProduct
+		{
+			get
+			{
+				return this._IdProduct;
+			}
+			set
+			{
+				if ((this._IdProduct != value))
+				{
+					if (this._Product.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnIdProductChanging(value);
+					this.SendPropertyChanging();
+					this._IdProduct = value;
+					this.SendPropertyChanged("IdProduct");
+					this.OnIdProductChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Quantity", DbType="Int NOT NULL")]
+		public int Quantity
+		{
+			get
+			{
+				return this._Quantity;
+			}
+			set
+			{
+				if ((this._Quantity != value))
+				{
+					this.OnQuantityChanging(value);
+					this.SendPropertyChanging();
+					this._Quantity = value;
+					this.SendPropertyChanged("Quantity");
+					this.OnQuantityChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Product_Reponsitory", Storage="_Product", ThisKey="IdProduct", OtherKey="Id", IsForeignKey=true)]
+		public Product Product
+		{
+			get
+			{
+				return this._Product.Entity;
+			}
+			set
+			{
+				Product previousValue = this._Product.Entity;
+				if (((previousValue != value) 
+							|| (this._Product.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Product.Entity = null;
+						previousValue.Reponsitory = null;
+					}
+					this._Product.Entity = value;
+					if ((value != null))
+					{
+						value.Reponsitory = this;
+						this._IdProduct = value.Id;
+					}
+					else
+					{
+						this._IdProduct = default(int);
+					}
+					this.SendPropertyChanged("Product");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
 		}
 	}
 	
