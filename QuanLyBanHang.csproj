@@ -53,28 +53,28 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataClasses1.dbml</DependentUpon>
     </Compile>
-    <Compile Include="UI\FormMain.cs">
+    <Compile Include="GUI\FormMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\FormMain.Designer.cs">
+    <Compile Include="GUI\FormMain.Designer.cs">
       <DependentUpon>FormMain.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UI\UCCustomer.cs">
+    <Compile Include="GUI\UCCustomer.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UI\UCCustomer.Designer.cs">
+    <Compile Include="GUI\UCCustomer.Designer.cs">
       <DependentUpon>UCCustomer.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\UCStaff.cs">
+    <Compile Include="GUI\UCStaff.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UI\UCStaff.Designer.cs">
+    <Compile Include="GUI\UCStaff.Designer.cs">
       <DependentUpon>UCStaff.cs</DependentUpon>
     </Compile>
     <Compile Include="Utils\Utils.cs" />
-    <EmbeddedResource Include="UI\FormMain.resx">
+    <EmbeddedResource Include="GUI\FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -87,10 +87,10 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="UI\UCCustomer.resx">
+    <EmbeddedResource Include="GUI\UCCustomer.resx">
       <DependentUpon>UCCustomer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\UCStaff.resx">
+    <EmbeddedResource Include="GUI\UCStaff.resx">
       <DependentUpon>UCStaff.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="DAL\DataClasses1.dbml">

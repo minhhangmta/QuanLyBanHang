@@ -18,11 +18,15 @@ namespace QuanLyBanHang.UI
     {
         private DataClasses1DataContext dbContext;
         private StallBus stallBus;
+        private StaffBus staffBus;
         public UCStaff()
         {
             InitializeComponent();
+
             dbContext = new DataClasses1DataContext();
             stallBus = new StallBus();
+            staffBus = new StaffBus();
+
             LoadData();
             setEnableToolBox(false);
             initButton();
@@ -38,7 +42,7 @@ namespace QuanLyBanHang.UI
 
         public void LoadData()
         {
-            DataTable dt = Utils.Utils.ToDataTable(dbContext.Staffs.ToList());
+            DataTable dt = staffBus.getDataTableStaff();
             dtgStaff.DataSource = dt;
         }
 
@@ -69,6 +73,7 @@ namespace QuanLyBanHang.UI
                 txtPhone.Text = dtgStaff.Rows[e.RowIndex].Cells["Phone"].Value.ToString();
                 txtPosition.Text = dtgStaff.Rows[e.RowIndex].Cells["Position"].Value.ToString();
                 dtpBirthDay.Text = dtgStaff.Rows[e.RowIndex].Cells["Date"].Value.ToString();
+                txtSarary.Text = dtgStaff.Rows[e.RowIndex].Cells["Salary"].Value.ToString();
                 LoadNameFromID(cbbStall, int.Parse(dtgStaff.Rows[e.RowIndex].Cells["IdStall"].Value.ToString()), listCbbStaff);
             }
             catch (Exception er)

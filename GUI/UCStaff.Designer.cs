@@ -239,11 +239,11 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(167, 249);
+            this.label7.Location = new System.Drawing.Point(139, 249);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(43, 13);
+            this.label7.Size = new System.Drawing.Size(71, 13);
             this.label7.TabIndex = 3;
-            this.label7.Text = "Lương :";
+            this.label7.Text = "Lương (vnđ) :";
             this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // txtSarary
