@@ -36,5 +36,18 @@ namespace QuanLyBanHang.Utils
             //put a breakpoint here and check datatable
             return dataTable;
         }
+
+        public class DataItem
+        {
+            public int Value { get; set; }
+            public string Name { get; set; }
+
+            public override string ToString()
+            {
+                return Name;
+            }
+        }
+
+
     }
 }

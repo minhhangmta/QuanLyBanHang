@@ -49,7 +49,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.txtSarary = new System.Windows.Forms.TextBox();
-            this.cbbStaff = new System.Windows.Forms.ComboBox();
+            this.cbbStall = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.dtpBirthDay = new System.Windows.Forms.DateTimePicker();
             this.panel2.SuspendLayout();
@@ -75,12 +75,17 @@
             // 
             // dtgStaff
             // 
+            this.dtgStaff.AllowUserToResizeColumns = false;
+            this.dtgStaff.AllowUserToResizeRows = false;
+            this.dtgStaff.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgStaff.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgStaff.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtgStaff.Location = new System.Drawing.Point(0, 0);
             this.dtgStaff.Name = "dtgStaff";
+            this.dtgStaff.ReadOnly = true;
             this.dtgStaff.Size = new System.Drawing.Size(777, 275);
             this.dtgStaff.TabIndex = 0;
+            this.dtgStaff.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgStaff_CellContentClick);
             // 
             // btnAdd
             // 
@@ -248,14 +253,14 @@
             this.txtSarary.Size = new System.Drawing.Size(143, 20);
             this.txtSarary.TabIndex = 4;
             // 
-            // cbbStaff
+            // cbbStall
             // 
-            this.cbbStaff.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbbStaff.FormattingEnabled = true;
-            this.cbbStaff.Location = new System.Drawing.Point(502, 207);
-            this.cbbStaff.Name = "cbbStaff";
-            this.cbbStaff.Size = new System.Drawing.Size(143, 21);
-            this.cbbStaff.TabIndex = 5;
+            this.cbbStall.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbStall.FormattingEnabled = true;
+            this.cbbStall.Location = new System.Drawing.Point(502, 207);
+            this.cbbStall.Name = "cbbStall";
+            this.cbbStall.Size = new System.Drawing.Size(143, 21);
+            this.cbbStall.TabIndex = 5;
             // 
             // label8
             // 
@@ -280,7 +285,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.dtpBirthDay);
-            this.Controls.Add(this.cbbStaff);
+            this.Controls.Add(this.cbbStall);
             this.Controls.Add(this.txtSarary);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
@@ -334,7 +339,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtSarary;
-        private System.Windows.Forms.ComboBox cbbStaff;
+        private System.Windows.Forms.ComboBox cbbStall;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.DateTimePicker dtpBirthDay;
     }
