@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using QuanLyBanHang.DAL;
 using QuanLyBanHang.Utils;
 using System.Data;
+using System.Windows.Forms;
+using static QuanLyBanHang.Utils.Utils;
 
 namespace QuanLyBanHang.BUS
 {
@@ -27,5 +29,22 @@ namespace QuanLyBanHang.BUS
         {
            return  Utils.Utils.ToDataTable(dbContext.Staffs.ToList());
         } 
+
+        public int SaveStaff(Staff staff)
+        {
+            try
+            { 
+            dbContext.Staffs.InsertOnSubmit(staff);
+            dbContext.SubmitChanges();
+            }
+            catch (Exception e)
+            {
+                Console.Write(e.Message);
+                return -1;
+            }
+            return 1;
+        }
+
+       
     }
 }

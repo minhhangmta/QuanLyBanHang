@@ -74,7 +74,7 @@ namespace QuanLyBanHang.UI
                 txtPosition.Text = dtgStaff.Rows[e.RowIndex].Cells["Position"].Value.ToString();
                 dtpBirthDay.Text = dtgStaff.Rows[e.RowIndex].Cells["Date"].Value.ToString();
                 txtSarary.Text = dtgStaff.Rows[e.RowIndex].Cells["Salary"].Value.ToString();
-                LoadNameFromID(cbbStall, int.Parse(dtgStaff.Rows[e.RowIndex].Cells["IdStall"].Value.ToString()), listCbbStaff);
+                Utils.Utils.LoadNameFromID(cbbStall, int.Parse(dtgStaff.Rows[e.RowIndex].Cells["IdStall"].Value.ToString()), listCbbStaff);
             }
             catch (Exception er)
             {
@@ -82,27 +82,73 @@ namespace QuanLyBanHang.UI
             }
         }
 
-        private void LoadNameFromID(ComboBox cbb, int id, List<DataItem> list)
+        //private void LoadNameFromID(ComboBox cbb, int id, List<DataItem> list)
+        //{
+        //    // cbb.DataSource = list;
+        //    LoadComboboxData(cbb, list);
+        //    int i = 0;
+        //    foreach (DataItem item in list)
+        //    {
+        //        if (item.Value == id)
+        //        {
+        //            cbb.SelectedIndex = i;
+        //            return;
+        //        }
+        //        i++;
+        //    }
+        //}
+
+        //private void LoadComboboxData(ComboBox cbb, List<DataItem> list)
+        //{
+        //    cbb.DataSource = list;
+        //    cbb.ValueMember = "Value";
+        //    cbb.DisplayMember = "Name";
+        //}
+
+        private void btnAdd_Click(object sender, EventArgs e)
         {
-            // cbb.DataSource = list;
-            LoadComboboxData(cbb, list);
-            int i = 0;
-            foreach (DataItem item in list)
-            {
-                if (item.Value == id)
-                {
-                    cbb.SelectedIndex = i;
-                    return;
-                }
-                i++;
-            }
+            setEnableToolBox(true);
+            Utils.Utils.LoadComboboxData(cbbStall, stallBus.getListDataItemStall());
         }
 
-        private void LoadComboboxData(ComboBox cbb, List<DataItem> list)
+        private Staff getStaff()
         {
-            cbb.DataSource = list;
-            cbb.ValueMember = "Value";
-            cbb.DisplayMember = "Name";
+            Staff staff = new Staff()
+            {
+                Name = txtName.Text,
+                Address = txtAddress.Text,
+                Position = txtPosition.Text,
+                Date = dtpBirthDay.Value,
+                Salary = decimal.Parse(txtSarary.Text),
+                Phone = txtPhone.Text,
+                IdStall = int.Parse(cbbStall.SelectedValue.ToString())
+            };
+            return staff;
+        }
+
+        private void ClearTextBox()
+        {
+            txtName.Text = "";
+            txtPhone.Text = "";
+            txtPosition.Text = "";
+            txtSarary.Text = "";
+            txtAddress.Text = "";
+            Utils.Utils.LoadComboboxData(cbbStall, stallBus.getListDataItemStall());
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            int result = staffBus.SaveStaff(getStaff());
+            if (result == 1)
+            {
+                MessageBox.Show("Lưu thành công!","Thông báo",MessageBoxButtons.OK, MessageBoxIcon.Information);
+                LoadData();
+            }
+            else
+            {
+                MessageBox.Show("Lưu không thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
         }
     }
 }

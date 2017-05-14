@@ -52,6 +52,8 @@
             this.cbbStall = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.dtpBirthDay = new System.Windows.Forms.DateTimePicker();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgStaff)).BeginInit();
             this.SuspendLayout();
@@ -98,12 +100,13 @@
             this.btnAdd.Text = "Thêm";
             this.btnAdd.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnEdit
             // 
             this.btnEdit.Image = global::QuanLyBanHang.Properties.Resources.edit;
             this.btnEdit.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnEdit.Location = new System.Drawing.Point(15, 127);
+            this.btnEdit.Location = new System.Drawing.Point(15, 114);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(62, 35);
             this.btnEdit.TabIndex = 2;
@@ -115,7 +118,7 @@
             // 
             this.btnDelete.Image = global::QuanLyBanHang.Properties.Resources.delete;
             this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnDelete.Location = new System.Drawing.Point(15, 193);
+            this.btnDelete.Location = new System.Drawing.Point(15, 164);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(62, 36);
             this.btnDelete.TabIndex = 2;
@@ -127,7 +130,7 @@
             // 
             this.btnSearch.Image = global::QuanLyBanHang.Properties.Resources.search2;
             this.btnSearch.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnSearch.Location = new System.Drawing.Point(15, 256);
+            this.btnSearch.Location = new System.Drawing.Point(15, 323);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(62, 35);
             this.btnSearch.TabIndex = 2;
@@ -168,7 +171,7 @@
             this.txtName.Location = new System.Drawing.Point(228, 127);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(143, 20);
-            this.txtName.TabIndex = 4;
+            this.txtName.TabIndex = 5;
             // 
             // label2
             // 
@@ -184,7 +187,7 @@
             this.txtAddress.Location = new System.Drawing.Point(228, 167);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(143, 20);
-            this.txtAddress.TabIndex = 4;
+            this.txtAddress.TabIndex = 6;
             // 
             // label3
             // 
@@ -200,7 +203,7 @@
             this.txtPhone.Location = new System.Drawing.Point(502, 167);
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(143, 20);
-            this.txtPhone.TabIndex = 4;
+            this.txtPhone.TabIndex = 10;
             // 
             // label4
             // 
@@ -216,7 +219,7 @@
             this.txtPosition.Location = new System.Drawing.Point(228, 205);
             this.txtPosition.Name = "txtPosition";
             this.txtPosition.Size = new System.Drawing.Size(143, 20);
-            this.txtPosition.TabIndex = 4;
+            this.txtPosition.TabIndex = 7;
             // 
             // label5
             // 
@@ -251,7 +254,7 @@
             this.txtSarary.Location = new System.Drawing.Point(228, 246);
             this.txtSarary.Name = "txtSarary";
             this.txtSarary.Size = new System.Drawing.Size(143, 20);
-            this.txtSarary.TabIndex = 4;
+            this.txtSarary.TabIndex = 8;
             // 
             // cbbStall
             // 
@@ -260,7 +263,7 @@
             this.cbbStall.Location = new System.Drawing.Point(502, 207);
             this.cbbStall.Name = "cbbStall";
             this.cbbStall.Size = new System.Drawing.Size(143, 21);
-            this.cbbStall.TabIndex = 5;
+            this.cbbStall.TabIndex = 11;
             // 
             // label8
             // 
@@ -274,10 +277,39 @@
             // 
             // dtpBirthDay
             // 
-            this.dtpBirthDay.Location = new System.Drawing.Point(502, 126);
+            this.dtpBirthDay.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpBirthDay.Location = new System.Drawing.Point(502, 127);
+            this.dtpBirthDay.MaxDate = new System.DateTime(2017, 5, 14, 0, 0, 0, 0);
+            this.dtpBirthDay.MinDate = new System.DateTime(1940, 2, 21, 0, 0, 0, 0);
             this.dtpBirthDay.Name = "dtpBirthDay";
-            this.dtpBirthDay.Size = new System.Drawing.Size(200, 20);
-            this.dtpBirthDay.TabIndex = 6;
+            this.dtpBirthDay.Size = new System.Drawing.Size(143, 20);
+            this.dtpBirthDay.TabIndex = 9;
+            this.dtpBirthDay.Value = new System.DateTime(2017, 5, 14, 0, 0, 0, 0);
+            // 
+            // btnSave
+            // 
+            this.btnSave.Image = global::QuanLyBanHang.Properties.Resources.save;
+            this.btnSave.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnSave.Location = new System.Drawing.Point(15, 218);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(62, 35);
+            this.btnSave.TabIndex = 2;
+            this.btnSave.Text = "Lưu";
+            this.btnSave.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.Image = global::QuanLyBanHang.Properties.Resources.cen1;
+            this.btnCancel.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnCancel.Location = new System.Drawing.Point(15, 269);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(62, 35);
+            this.btnCancel.TabIndex = 2;
+            this.btnCancel.Text = "Hủy";
+            this.btnCancel.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnCancel.UseVisualStyleBackColor = true;
             // 
             // UCStaff
             // 
@@ -301,6 +333,8 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtId);
             this.Controls.Add(this.d);
+            this.Controls.Add(this.btnCancel);
+            this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnEdit);
@@ -342,5 +376,7 @@
         private System.Windows.Forms.ComboBox cbbStall;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.DateTimePicker dtpBirthDay;
+        private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.Button btnCancel;
     }
 }

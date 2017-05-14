@@ -5,6 +5,7 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace QuanLyBanHang.Utils
 {
@@ -35,6 +36,29 @@ namespace QuanLyBanHang.Utils
             }
             //put a breakpoint here and check datatable
             return dataTable;
+        }
+
+        public static void LoadNameFromID(ComboBox cbb, int id, List<DataItem> list)
+        {
+            // cbb.DataSource = list;
+            LoadComboboxData(cbb, list);
+            int i = 0;
+            foreach (DataItem item in list)
+            {
+                if (item.Value == id)
+                {
+                    cbb.SelectedIndex = i;
+                    return;
+                }
+                i++;
+            }
+        }
+
+        public static void LoadComboboxData(ComboBox cbb, List<DataItem> list)
+        {
+            cbb.DataSource = list;
+            cbb.ValueMember = "Value";
+            cbb.DisplayMember = "Name";
         }
 
         public class DataItem
