@@ -34,6 +34,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -45,14 +46,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="DAL\DataClasses1.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataClasses1.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FormMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="UI\FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="UI\FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -61,7 +70,16 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="DAL\DataClasses1.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>DataClasses1.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DAL\DataClasses1.dbml.layout">
+      <DependentUpon>DataClasses1.dbml</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -74,6 +92,87 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="BUS\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resource\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resource\cen1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resource\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resource\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resource\edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resource\editicon.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resource\erroricon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resource\iconprint.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resource\refresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resource\save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resource\search2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resource\yes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resource\book.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resource\major.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resource\chart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resource\staff.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resource\cusommer.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resource\packing.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resource\Shipping6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resource\Sales-by-Payment-Method-rep.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resource\move_file_arrow_import_left_document.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resource\export.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resource\calendar-icon-1487803_960_720.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resource\calendar-selection-day-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resource\Calender-2017.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
