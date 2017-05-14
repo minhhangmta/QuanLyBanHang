@@ -47,12 +47,9 @@ namespace QuanLyBanHang
         private Bitmap img = Properties.Resources.close;
         private void tabControl_DrawItem(object sender, DrawItemEventArgs e)
         {
-            if (e.Index != 0)
-            {
                 e.Graphics.DrawImage(img, new Point(e.Bounds.Right - 18, e.Bounds.Top + 1));
                 e.Graphics.DrawString(this.tabControl.TabPages[e.Index].Text, e.Font, Brushes.Black, e.Bounds.Left + 3, e.Bounds.Top + 4);
                 e.DrawFocusRectangle();
-            }
         }
 
         private void tabControl_MouseDown(object sender, MouseEventArgs e)
