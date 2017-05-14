@@ -16,6 +16,11 @@ namespace QuanLyBanHang.BUS
             this.dbContext = new DataClasses1DataContext();
         }
 
+        public List<Stall> getListStall()
+        {
+            return dbContext.Stalls.ToList();
+        }
+
         public List<DataItem> getListDataItemStall()
         {
             List<Stall> listStall = dbContext.Stalls.ToList();

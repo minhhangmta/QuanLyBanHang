@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dtgStaff = new System.Windows.Forms.DataGridView();
@@ -54,8 +55,16 @@
             this.dtpBirthDay = new System.Windows.Forms.DateTimePicker();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.btnEditCMS = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnDeleteCMS = new System.Windows.Forms.ToolStripMenuItem();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtKeySearch = new System.Windows.Forms.TextBox();
+            this.lblResult = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgStaff)).BeginInit();
+            this.contextMenuStrip1.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -85,15 +94,19 @@
             this.dtgStaff.Location = new System.Drawing.Point(0, 0);
             this.dtgStaff.Name = "dtgStaff";
             this.dtgStaff.ReadOnly = true;
+            this.dtgStaff.RowHeadersVisible = false;
             this.dtgStaff.Size = new System.Drawing.Size(777, 275);
             this.dtgStaff.TabIndex = 0;
             this.dtgStaff.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgStaff_CellContentClick);
+            this.dtgStaff.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dtgStaff_CellFormatting);
+            this.dtgStaff.CellMouseDown += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dtgStaff_CellMouseDown);
+            this.dtgStaff.MouseDown += new System.Windows.Forms.MouseEventHandler(this.dtgStaff_MouseDown);
             // 
             // btnAdd
             // 
             this.btnAdd.Image = global::QuanLyBanHang.Properties.Resources.add;
             this.btnAdd.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnAdd.Location = new System.Drawing.Point(15, 64);
+            this.btnAdd.Location = new System.Drawing.Point(15, 32);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(62, 36);
             this.btnAdd.TabIndex = 2;
@@ -106,37 +119,40 @@
             // 
             this.btnEdit.Image = global::QuanLyBanHang.Properties.Resources.edit;
             this.btnEdit.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnEdit.Location = new System.Drawing.Point(15, 114);
+            this.btnEdit.Location = new System.Drawing.Point(15, 82);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(62, 35);
             this.btnEdit.TabIndex = 2;
             this.btnEdit.Text = "Sửa";
             this.btnEdit.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnDelete
             // 
             this.btnDelete.Image = global::QuanLyBanHang.Properties.Resources.delete;
             this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnDelete.Location = new System.Drawing.Point(15, 164);
+            this.btnDelete.Location = new System.Drawing.Point(15, 132);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(62, 36);
             this.btnDelete.TabIndex = 2;
             this.btnDelete.Text = "Xóa";
             this.btnDelete.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnSearch
             // 
             this.btnSearch.Image = global::QuanLyBanHang.Properties.Resources.search2;
             this.btnSearch.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnSearch.Location = new System.Drawing.Point(15, 323);
+            this.btnSearch.Location = new System.Drawing.Point(6, 25);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(62, 35);
             this.btnSearch.TabIndex = 2;
             this.btnSearch.Text = "Tìm kiếm";
             this.btnSearch.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // d
             // 
@@ -204,6 +220,7 @@
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(143, 20);
             this.txtPhone.TabIndex = 10;
+            this.txtPhone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPhone_KeyPress);
             // 
             // label4
             // 
@@ -224,11 +241,12 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(182, 96);
+            this.label5.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.label5.Location = new System.Drawing.Point(106, 59);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(28, 13);
+            this.label5.Size = new System.Drawing.Size(50, 13);
             this.label5.TabIndex = 3;
-            this.label5.Text = "Mã :";
+            this.label5.Text = "Kết quả :";
             // 
             // label6
             // 
@@ -255,6 +273,7 @@
             this.txtSarary.Name = "txtSarary";
             this.txtSarary.Size = new System.Drawing.Size(143, 20);
             this.txtSarary.TabIndex = 8;
+            this.txtSarary.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSarary_KeyPress);
             // 
             // cbbStall
             // 
@@ -288,9 +307,10 @@
             // 
             // btnSave
             // 
+            this.btnSave.Enabled = false;
             this.btnSave.Image = global::QuanLyBanHang.Properties.Resources.save;
             this.btnSave.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnSave.Location = new System.Drawing.Point(15, 218);
+            this.btnSave.Location = new System.Drawing.Point(15, 186);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(62, 35);
             this.btnSave.TabIndex = 2;
@@ -301,21 +321,75 @@
             // 
             // btnCancel
             // 
+            this.btnCancel.Enabled = false;
             this.btnCancel.Image = global::QuanLyBanHang.Properties.Resources.cen1;
             this.btnCancel.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnCancel.Location = new System.Drawing.Point(15, 269);
+            this.btnCancel.Location = new System.Drawing.Point(15, 237);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(62, 35);
             this.btnCancel.TabIndex = 2;
             this.btnCancel.Text = "Hủy";
             this.btnCancel.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btnEditCMS,
+            this.btnDeleteCMS});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(97, 48);
+            // 
+            // btnEditCMS
+            // 
+            this.btnEditCMS.Image = global::QuanLyBanHang.Properties.Resources.edit;
+            this.btnEditCMS.Name = "btnEditCMS";
+            this.btnEditCMS.Size = new System.Drawing.Size(96, 22);
+            this.btnEditCMS.Text = "Sửa ";
+            // 
+            // btnDeleteCMS
+            // 
+            this.btnDeleteCMS.Image = global::QuanLyBanHang.Properties.Resources.delete;
+            this.btnDeleteCMS.Name = "btnDeleteCMS";
+            this.btnDeleteCMS.Size = new System.Drawing.Size(96, 22);
+            this.btnDeleteCMS.Text = "Xóa";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.btnSearch);
+            this.groupBox1.Controls.Add(this.txtKeySearch);
+            this.groupBox1.Controls.Add(this.lblResult);
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Location = new System.Drawing.Point(15, 271);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(356, 82);
+            this.groupBox1.TabIndex = 12;
+            this.groupBox1.TabStop = false;
+            // 
+            // txtKeySearch
+            // 
+            this.txtKeySearch.Location = new System.Drawing.Point(106, 33);
+            this.txtKeySearch.Name = "txtKeySearch";
+            this.txtKeySearch.Size = new System.Drawing.Size(207, 20);
+            this.txtKeySearch.TabIndex = 4;
+            // 
+            // lblResult
+            // 
+            this.lblResult.AutoSize = true;
+            this.lblResult.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.lblResult.Location = new System.Drawing.Point(155, 60);
+            this.lblResult.Name = "lblResult";
+            this.lblResult.Size = new System.Drawing.Size(13, 13);
+            this.lblResult.TabIndex = 3;
+            this.lblResult.Text = "0";
             // 
             // UCStaff
             // 
             this.AccessibleDescription = "Nhân viên";
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dtpBirthDay);
             this.Controls.Add(this.cbbStall);
             this.Controls.Add(this.txtSarary);
@@ -327,7 +401,6 @@
             this.Controls.Add(this.txtPhone);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtAddress);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.label1);
@@ -335,7 +408,6 @@
             this.Controls.Add(this.d);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnSave);
-            this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.btnAdd);
@@ -345,6 +417,9 @@
             this.Size = new System.Drawing.Size(777, 824);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtgStaff)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -378,5 +453,11 @@
         private System.Windows.Forms.DateTimePicker dtpBirthDay;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem btnEditCMS;
+        private System.Windows.Forms.ToolStripMenuItem btnDeleteCMS;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.TextBox txtKeySearch;
+        private System.Windows.Forms.Label lblResult;
     }
 }
