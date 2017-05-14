@@ -71,6 +71,7 @@
     <Compile Include="UI\UCStaff.Designer.cs">
       <DependentUpon>UCStaff.cs</DependentUpon>
     </Compile>
+    <Compile Include="Utils\Utils.cs" />
     <EmbeddedResource Include="UI\FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
     </EmbeddedResource>

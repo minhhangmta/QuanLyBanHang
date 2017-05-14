@@ -30,13 +30,13 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.dtgNhanVien = new System.Windows.Forms.DataGridView();
+            this.dtgStaff = new System.Windows.Forms.DataGridView();
             this.btnSearch = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnSearchh = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgNhanVien)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgStaff)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -49,21 +49,21 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.dtgNhanVien);
+            this.panel2.Controls.Add(this.dtgStaff);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(0, 297);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(777, 372);
             this.panel2.TabIndex = 1;
             // 
-            // dtgNhanVien
+            // dtgStaff
             // 
-            this.dtgNhanVien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgNhanVien.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dtgNhanVien.Location = new System.Drawing.Point(0, 0);
-            this.dtgNhanVien.Name = "dtgNhanVien";
-            this.dtgNhanVien.Size = new System.Drawing.Size(777, 372);
-            this.dtgNhanVien.TabIndex = 0;
+            this.dtgStaff.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgStaff.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dtgStaff.Location = new System.Drawing.Point(0, 0);
+            this.dtgStaff.Name = "dtgStaff";
+            this.dtgStaff.Size = new System.Drawing.Size(777, 372);
+            this.dtgStaff.TabIndex = 0;
             // 
             // btnSearch
             // 
@@ -81,7 +81,7 @@
             // 
             this.btnEdit.Image = global::QuanLyBanHang.Properties.Resources.edit;
             this.btnEdit.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnEdit.Location = new System.Drawing.Point(15, 110);
+            this.btnEdit.Location = new System.Drawing.Point(15, 154);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(62, 41);
             this.btnEdit.TabIndex = 2;
@@ -93,7 +93,7 @@
             // 
             this.btnDelete.Image = global::QuanLyBanHang.Properties.Resources.delete;
             this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnDelete.Location = new System.Drawing.Point(15, 63);
+            this.btnDelete.Location = new System.Drawing.Point(15, 85);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(62, 41);
             this.btnDelete.TabIndex = 2;
@@ -105,7 +105,7 @@
             // 
             this.btnSearchh.Image = global::QuanLyBanHang.Properties.Resources.search2;
             this.btnSearchh.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnSearchh.Location = new System.Drawing.Point(15, 157);
+            this.btnSearchh.Location = new System.Drawing.Point(15, 219);
             this.btnSearchh.Name = "btnSearchh";
             this.btnSearchh.Size = new System.Drawing.Size(62, 41);
             this.btnSearchh.TabIndex = 2;
@@ -127,7 +127,7 @@
             this.Name = "UCStaff";
             this.Size = new System.Drawing.Size(777, 710);
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dtgNhanVien)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgStaff)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -136,7 +136,7 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.DataGridView dtgNhanVien;
+        private System.Windows.Forms.DataGridView dtgStaff;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Button btnDelete;
