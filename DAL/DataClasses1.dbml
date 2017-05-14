@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="SuperMarket" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=HUNGTRAN;Initial Catalog=SuperMarket;Integrated Security=True" SettingsObjectName="QuanLyBanHang.Properties.Settings" SettingsPropertyName="SuperMarketConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Bill" Member="Bills">
+    <Type Name="Bill">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Date" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="GrandTotal" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="IdStaff" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IdCustomer" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Bill_BillDetail" Member="BillDetails" ThisKey="Id" OtherKey="IdBill" Type="BillDetail" />
+      <Association Name="Customer_Bill" Member="Customer" ThisKey="IdCustomer" OtherKey="Id" Type="Customer" IsForeignKey="true" />
+      <Association Name="Staff_Bill" Member="Staff" ThisKey="IdStaff" OtherKey="Id" Type="Staff" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.BillDetail" Member="BillDetails">
+    <Type Name="BillDetail">
+      <Column Name="IdProduct" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IdBill" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Quantity" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PriceExport" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Association Name="Bill_BillDetail" Member="Bill" ThisKey="IdBill" OtherKey="Id" Type="Bill" IsForeignKey="true" />
+      <Association Name="Product_BillDetail" Member="Product" ThisKey="IdProduct" OtherKey="Id" Type="Product" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Customer" Member="Customers">
+    <Type Name="Customer">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="PhoneNumber" Type="System.String" DbType="VarChar(13) NOT NULL" CanBeNull="false" />
+      <Association Name="Customer_Bill" Member="Bills" ThisKey="Id" OtherKey="IdCustomer" Type="Bill" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Import" Member="Imports">
+    <Type Name="Import">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Date" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="GrandTotal" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="IdStaff" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Import_ImportDetail" Member="ImportDetails" ThisKey="Id" OtherKey="IdImport" Type="ImportDetail" />
+      <Association Name="Staff_Import" Member="Staff" ThisKey="IdStaff" OtherKey="Id" Type="Staff" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ImportDetail" Member="ImportDetails">
+    <Type Name="ImportDetail">
+      <Column Name="IdProduct" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IdImport" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Quantity" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PriceImport" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Association Name="Import_ImportDetail" Member="Import" ThisKey="IdImport" OtherKey="Id" Type="Import" IsForeignKey="true" />
+      <Association Name="Product_ImportDetail" Member="Product" ThisKey="IdProduct" OtherKey="Id" Type="Product" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Product" Member="Products">
+    <Type Name="Product">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Manufacturer" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Unit" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="PriceImport" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="PriceExport" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="NumberOfStall" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="NumberOfRepository" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="IdStall" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Product_BillDetail" Member="BillDetails" ThisKey="Id" OtherKey="IdProduct" Type="BillDetail" />
+      <Association Name="Product_ImportDetail" Member="ImportDetails" ThisKey="Id" OtherKey="IdProduct" Type="ImportDetail" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Staff" Member="Staffs">
+    <Type Name="Staff">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Phone" Type="System.String" DbType="VarChar(13) NOT NULL" CanBeNull="false" />
+      <Column Name="Position" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Date" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="Salary" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="IdStall" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Staff_Bill" Member="Bills" ThisKey="Id" OtherKey="IdStaff" Type="Bill" />
+      <Association Name="Staff_Import" Member="Imports" ThisKey="Id" OtherKey="IdStaff" Type="Import" />
+      <Association Name="Stall_Staff" Member="Stall" ThisKey="IdStall" OtherKey="Id" Type="Stall" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Stall" Member="Stalls">
+    <Type Name="Stall">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="Stall_Staff" Member="Staffs" ThisKey="Id" OtherKey="IdStall" Type="Staff" />
+    </Type>
+  </Table>
+</Database>
