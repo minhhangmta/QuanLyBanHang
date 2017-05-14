@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QuanLyBanHang.UI;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,12 @@ namespace QuanLyBanHang
 {
     public partial class FormMain : Form
     {
+
+        private UCStaff ucStaff;
         public FormMain()
         {
             InitializeComponent();
+            ucStaff = new UCStaff();
         }
 
         public void AddNewTab(UserControl userControl)
@@ -51,13 +55,22 @@ namespace QuanLyBanHang
 
         private void tabControl_MouseDown(object sender, MouseEventArgs e)
         {
+            if (this.tabControl.TabPages.Count <= 0)
+            {
+                return;
+            }
             Rectangle r = tabControl.GetTabRect(this.tabControl.SelectedIndex);
             Rectangle closeButton = new Rectangle(r.Right - 15, r.Top + 4, 9, 7);
             if (closeButton.Contains(e.Location))
             {
-
+                
                 this.tabControl.TabPages.Remove(this.tabControl.SelectedTab);
             }
+        }
+
+        private void nhânViênToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AddNewTab(ucStaff);
         }
     }
 }

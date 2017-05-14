@@ -32,18 +32,18 @@
             this.tabControl = new System.Windows.Forms.TabControl();
             this.danhMụcToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nhânViênToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.kháchHàngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.sảnPhẩmToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.khoHàngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnCustomer = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnProduct = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnResponsitory = new System.Windows.Forms.ToolStripMenuItem();
             this.tácVuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.lậpHóaĐơnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.lậpPhiếuNhậpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.lậpPhiếuXuấtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnBill = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnImport = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnExport = new System.Windows.Forms.ToolStripMenuItem();
             this.thốngKêToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.theoNgàyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.theoThángToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnStatisByDay = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnStatisByMonth = new System.Windows.Forms.ToolStripMenuItem();
             this.theoQuýToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.theoNămToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnStatisByYear = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -75,9 +75,9 @@
             // 
             this.danhMụcToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.nhânViênToolStripMenuItem,
-            this.kháchHàngToolStripMenuItem,
-            this.sảnPhẩmToolStripMenuItem,
-            this.khoHàngToolStripMenuItem});
+            this.btnCustomer,
+            this.btnProduct,
+            this.btnResponsitory});
             this.danhMụcToolStripMenuItem.Image = global::QuanLyBanHang.Properties.Resources.book;
             this.danhMụcToolStripMenuItem.Name = "danhMụcToolStripMenuItem";
             this.danhMụcToolStripMenuItem.Size = new System.Drawing.Size(90, 20);
@@ -89,85 +89,86 @@
             this.nhânViênToolStripMenuItem.Name = "nhânViênToolStripMenuItem";
             this.nhânViênToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.nhânViênToolStripMenuItem.Text = "Nhân viên";
+            this.nhânViênToolStripMenuItem.Click += new System.EventHandler(this.nhânViênToolStripMenuItem_Click);
             // 
-            // kháchHàngToolStripMenuItem
+            // btnCustomer
             // 
-            this.kháchHàngToolStripMenuItem.Image = global::QuanLyBanHang.Properties.Resources.cusommer;
-            this.kháchHàngToolStripMenuItem.Name = "kháchHàngToolStripMenuItem";
-            this.kháchHàngToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.kháchHàngToolStripMenuItem.Text = "Khách hàng";
+            this.btnCustomer.Image = global::QuanLyBanHang.Properties.Resources.cusommer;
+            this.btnCustomer.Name = "btnCustomer";
+            this.btnCustomer.Size = new System.Drawing.Size(152, 22);
+            this.btnCustomer.Text = "Khách hàng";
             // 
-            // sảnPhẩmToolStripMenuItem
+            // btnProduct
             // 
-            this.sảnPhẩmToolStripMenuItem.Image = global::QuanLyBanHang.Properties.Resources.packing;
-            this.sảnPhẩmToolStripMenuItem.Name = "sảnPhẩmToolStripMenuItem";
-            this.sảnPhẩmToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.sảnPhẩmToolStripMenuItem.Text = "Sản phẩm";
+            this.btnProduct.Image = global::QuanLyBanHang.Properties.Resources.packing;
+            this.btnProduct.Name = "btnProduct";
+            this.btnProduct.Size = new System.Drawing.Size(152, 22);
+            this.btnProduct.Text = "Sản phẩm";
             // 
-            // khoHàngToolStripMenuItem
+            // btnResponsitory
             // 
-            this.khoHàngToolStripMenuItem.Image = global::QuanLyBanHang.Properties.Resources.Shipping6;
-            this.khoHàngToolStripMenuItem.Name = "khoHàngToolStripMenuItem";
-            this.khoHàngToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.khoHàngToolStripMenuItem.Text = "Kho hàng";
+            this.btnResponsitory.Image = global::QuanLyBanHang.Properties.Resources.Shipping6;
+            this.btnResponsitory.Name = "btnResponsitory";
+            this.btnResponsitory.Size = new System.Drawing.Size(152, 22);
+            this.btnResponsitory.Text = "Kho hàng";
             // 
             // tácVuToolStripMenuItem
             // 
             this.tácVuToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.lậpHóaĐơnToolStripMenuItem,
-            this.lậpPhiếuNhậpToolStripMenuItem,
-            this.lậpPhiếuXuấtToolStripMenuItem});
+            this.btnBill,
+            this.btnImport,
+            this.btnExport});
             this.tácVuToolStripMenuItem.Image = global::QuanLyBanHang.Properties.Resources.major;
             this.tácVuToolStripMenuItem.Name = "tácVuToolStripMenuItem";
             this.tácVuToolStripMenuItem.Size = new System.Drawing.Size(90, 20);
             this.tácVuToolStripMenuItem.Text = "Nghiệp vụ";
             // 
-            // lậpHóaĐơnToolStripMenuItem
+            // btnBill
             // 
-            this.lậpHóaĐơnToolStripMenuItem.Image = global::QuanLyBanHang.Properties.Resources.Sales_by_Payment_Method_rep;
-            this.lậpHóaĐơnToolStripMenuItem.Name = "lậpHóaĐơnToolStripMenuItem";
-            this.lậpHóaĐơnToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.lậpHóaĐơnToolStripMenuItem.Text = "Hóa đơn";
+            this.btnBill.Image = global::QuanLyBanHang.Properties.Resources.Sales_by_Payment_Method_rep;
+            this.btnBill.Name = "btnBill";
+            this.btnBill.Size = new System.Drawing.Size(152, 22);
+            this.btnBill.Text = "Hóa đơn";
             // 
-            // lậpPhiếuNhậpToolStripMenuItem
+            // btnImport
             // 
-            this.lậpPhiếuNhậpToolStripMenuItem.Image = global::QuanLyBanHang.Properties.Resources.move_file_arrow_import_left_document;
-            this.lậpPhiếuNhậpToolStripMenuItem.Name = "lậpPhiếuNhậpToolStripMenuItem";
-            this.lậpPhiếuNhậpToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.lậpPhiếuNhậpToolStripMenuItem.Text = "Phiếu nhập";
+            this.btnImport.Image = global::QuanLyBanHang.Properties.Resources.move_file_arrow_import_left_document;
+            this.btnImport.Name = "btnImport";
+            this.btnImport.Size = new System.Drawing.Size(152, 22);
+            this.btnImport.Text = "Phiếu nhập";
             // 
-            // lậpPhiếuXuấtToolStripMenuItem
+            // btnExport
             // 
-            this.lậpPhiếuXuấtToolStripMenuItem.Image = global::QuanLyBanHang.Properties.Resources.export;
-            this.lậpPhiếuXuấtToolStripMenuItem.Name = "lậpPhiếuXuấtToolStripMenuItem";
-            this.lậpPhiếuXuấtToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.lậpPhiếuXuấtToolStripMenuItem.Text = "Phiếu xuất";
+            this.btnExport.Image = global::QuanLyBanHang.Properties.Resources.export;
+            this.btnExport.Name = "btnExport";
+            this.btnExport.Size = new System.Drawing.Size(152, 22);
+            this.btnExport.Text = "Phiếu xuất";
             // 
             // thốngKêToolStripMenuItem
             // 
             this.thốngKêToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.theoNgàyToolStripMenuItem,
-            this.theoThángToolStripMenuItem,
+            this.btnStatisByDay,
+            this.btnStatisByMonth,
             this.theoQuýToolStripMenuItem,
-            this.theoNămToolStripMenuItem});
+            this.btnStatisByYear});
             this.thốngKêToolStripMenuItem.Image = global::QuanLyBanHang.Properties.Resources.chart;
             this.thốngKêToolStripMenuItem.Name = "thốngKêToolStripMenuItem";
             this.thốngKêToolStripMenuItem.Size = new System.Drawing.Size(85, 20);
             this.thốngKêToolStripMenuItem.Text = "Thống kê";
             // 
-            // theoNgàyToolStripMenuItem
+            // btnStatisByDay
             // 
-            this.theoNgàyToolStripMenuItem.Image = global::QuanLyBanHang.Properties.Resources.calendar_icon_1487803_960_720;
-            this.theoNgàyToolStripMenuItem.Name = "theoNgàyToolStripMenuItem";
-            this.theoNgàyToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.theoNgàyToolStripMenuItem.Text = "Theo ngày";
+            this.btnStatisByDay.Image = global::QuanLyBanHang.Properties.Resources.calendar_icon_1487803_960_720;
+            this.btnStatisByDay.Name = "btnStatisByDay";
+            this.btnStatisByDay.Size = new System.Drawing.Size(152, 22);
+            this.btnStatisByDay.Text = "Theo ngày";
             // 
-            // theoThángToolStripMenuItem
+            // btnStatisByMonth
             // 
-            this.theoThángToolStripMenuItem.Image = global::QuanLyBanHang.Properties.Resources.calendar_selection_day_icon;
-            this.theoThángToolStripMenuItem.Name = "theoThángToolStripMenuItem";
-            this.theoThángToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.theoThángToolStripMenuItem.Text = "Theo tháng";
+            this.btnStatisByMonth.Image = global::QuanLyBanHang.Properties.Resources.calendar_selection_day_icon;
+            this.btnStatisByMonth.Name = "btnStatisByMonth";
+            this.btnStatisByMonth.Size = new System.Drawing.Size(152, 22);
+            this.btnStatisByMonth.Text = "Theo tháng";
             // 
             // theoQuýToolStripMenuItem
             // 
@@ -175,13 +176,13 @@
             this.theoQuýToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.theoQuýToolStripMenuItem.Text = "Theo quý";
             // 
-            // theoNămToolStripMenuItem
+            // btnStatisByYear
             // 
-            this.theoNămToolStripMenuItem.Image = global::QuanLyBanHang.Properties.Resources.Calender_2017;
-            this.theoNămToolStripMenuItem.Name = "theoNămToolStripMenuItem";
-            this.theoNămToolStripMenuItem.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.theoNămToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.theoNămToolStripMenuItem.Text = "Theo năm";
+            this.btnStatisByYear.Image = global::QuanLyBanHang.Properties.Resources.Calender_2017;
+            this.btnStatisByYear.Name = "btnStatisByYear";
+            this.btnStatisByYear.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnStatisByYear.Size = new System.Drawing.Size(152, 22);
+            this.btnStatisByYear.Text = "Theo năm";
             // 
             // FormMain
             // 
@@ -208,18 +209,18 @@
         private System.Windows.Forms.ToolStripMenuItem danhMụcToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tácVuToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem nhânViênToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem kháchHàngToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem sảnPhẩmToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem khoHàngToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem lậpHóaĐơnToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem lậpPhiếuNhậpToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem lậpPhiếuXuấtToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem btnCustomer;
+        private System.Windows.Forms.ToolStripMenuItem btnProduct;
+        private System.Windows.Forms.ToolStripMenuItem btnResponsitory;
+        private System.Windows.Forms.ToolStripMenuItem btnBill;
+        private System.Windows.Forms.ToolStripMenuItem btnImport;
+        private System.Windows.Forms.ToolStripMenuItem btnExport;
         private System.Windows.Forms.TabControl tabControl;
         private System.Windows.Forms.ToolStripMenuItem thốngKêToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem theoNgàyToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem theoThángToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem btnStatisByDay;
+        private System.Windows.Forms.ToolStripMenuItem btnStatisByMonth;
         private System.Windows.Forms.ToolStripMenuItem theoQuýToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem theoNămToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem btnStatisByYear;
     }
 }
 
