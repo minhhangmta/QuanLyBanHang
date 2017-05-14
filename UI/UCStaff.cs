@@ -20,12 +20,38 @@ namespace QuanLyBanHang.UI
             InitializeComponent();
             dbContext = new DataClasses1DataContext();
             LoadData();
+            setEnableToolBox(false);
+            initButton();
+        }
+
+        private void initButton()
+        {
+            btnAdd.Enabled = true;
+            btnDelete.Enabled = false;
+            btnEdit.Enabled = false;
+            btnSearch.Enabled = true;
         }
 
         public void LoadData()
         {
             DataTable dt = Utils.Utils.ToDataTable(dbContext.Staffs.ToList());
             dtgStaff.DataSource = dt;
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        public void setEnableToolBox(bool bol)
+        {
+            txtName.Enabled = bol;
+            txtAddress.Enabled = bol;
+            txtPhone.Enabled = bol;
+            txtPosition.Enabled = bol;
+            txtSarary.Enabled = bol;
+            dtpBirthDay.Enabled = bol;
+            cbbStaff.Enabled = bol;
         }
     }
 }
