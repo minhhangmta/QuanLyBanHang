@@ -61,6 +61,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtKeySearch = new System.Windows.Forms.TextBox();
             this.lblResult = new System.Windows.Forms.Label();
+            this.btnRefesh = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgStaff)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
@@ -145,7 +146,7 @@
             // 
             this.btnSearch.Image = global::QuanLyBanHang.Properties.Resources.search2;
             this.btnSearch.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnSearch.Location = new System.Drawing.Point(6, 25);
+            this.btnSearch.Location = new System.Drawing.Point(232, 27);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(62, 35);
             this.btnSearch.TabIndex = 2;
@@ -157,8 +158,9 @@
             // d
             // 
             this.d.AutoSize = true;
+            this.d.BackColor = System.Drawing.SystemColors.Control;
             this.d.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.d.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.d.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.d.Location = new System.Drawing.Point(303, 15);
             this.d.Name = "d";
             this.d.Size = new System.Drawing.Size(140, 31);
@@ -242,7 +244,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.label5.Location = new System.Drawing.Point(106, 59);
+            this.label5.Location = new System.Drawing.Point(8, 54);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(50, 13);
             this.label5.TabIndex = 3;
@@ -357,19 +359,20 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnRefesh);
             this.groupBox1.Controls.Add(this.btnSearch);
             this.groupBox1.Controls.Add(this.txtKeySearch);
             this.groupBox1.Controls.Add(this.lblResult);
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Location = new System.Drawing.Point(15, 271);
+            this.groupBox1.Location = new System.Drawing.Point(404, 280);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(356, 82);
+            this.groupBox1.Size = new System.Drawing.Size(367, 82);
             this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
             // 
             // txtKeySearch
             // 
-            this.txtKeySearch.Location = new System.Drawing.Point(106, 33);
+            this.txtKeySearch.Location = new System.Drawing.Point(8, 28);
             this.txtKeySearch.Name = "txtKeySearch";
             this.txtKeySearch.Size = new System.Drawing.Size(207, 20);
             this.txtKeySearch.TabIndex = 4;
@@ -378,17 +381,28 @@
             // 
             this.lblResult.AutoSize = true;
             this.lblResult.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.lblResult.Location = new System.Drawing.Point(155, 60);
+            this.lblResult.Location = new System.Drawing.Point(64, 54);
             this.lblResult.Name = "lblResult";
             this.lblResult.Size = new System.Drawing.Size(13, 13);
             this.lblResult.TabIndex = 3;
             this.lblResult.Text = "0";
+            // 
+            // btnRefesh
+            // 
+            this.btnRefesh.Image = global::QuanLyBanHang.Properties.Resources.refresh;
+            this.btnRefesh.Location = new System.Drawing.Point(313, 28);
+            this.btnRefesh.Name = "btnRefesh";
+            this.btnRefesh.Size = new System.Drawing.Size(38, 34);
+            this.btnRefesh.TabIndex = 5;
+            this.btnRefesh.UseVisualStyleBackColor = true;
+            this.btnRefesh.Click += new System.EventHandler(this.btnRefesh_Click);
             // 
             // UCStaff
             // 
             this.AccessibleDescription = "Nhân viên";
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dtpBirthDay);
             this.Controls.Add(this.cbbStall);
@@ -459,5 +473,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox txtKeySearch;
         private System.Windows.Forms.Label lblResult;
+        private System.Windows.Forms.Button btnRefesh;
     }
 }
