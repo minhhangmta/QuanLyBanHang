@@ -1,12 +1,12 @@
 D:\Workspace\THUTAPNHOM\QuanLyBanHang\bin\Debug\QuanLyBanHang.exe.config
 D:\Workspace\THUTAPNHOM\QuanLyBanHang\bin\Debug\QuanLyBanHang.exe
 D:\Workspace\THUTAPNHOM\QuanLyBanHang\bin\Debug\QuanLyBanHang.pdb
-D:\Workspace\THUTAPNHOM\QuanLyBanHang\obj\Debug\QuanLyBanHang.csprojResolveAssemblyReference.cache
 D:\Workspace\THUTAPNHOM\QuanLyBanHang\obj\Debug\QuanLyBanHang.FormMain.resources
+D:\Workspace\THUTAPNHOM\QuanLyBanHang\obj\Debug\QuanLyBanHang.GUI.UCStatistic.resources
+D:\Workspace\THUTAPNHOM\QuanLyBanHang\obj\Debug\QuanLyBanHang.GUI.UCProducts.resources
 D:\Workspace\THUTAPNHOM\QuanLyBanHang\obj\Debug\QuanLyBanHang.Properties.Resources.resources
+D:\Workspace\THUTAPNHOM\QuanLyBanHang\obj\Debug\QuanLyBanHang.UI.UCCustomer.resources
+D:\Workspace\THUTAPNHOM\QuanLyBanHang\obj\Debug\QuanLyBanHang.UI.UCStaff.resources
 D:\Workspace\THUTAPNHOM\QuanLyBanHang\obj\Debug\QuanLyBanHang.csproj.GenerateResource.Cache
 D:\Workspace\THUTAPNHOM\QuanLyBanHang\obj\Debug\QuanLyBanHang.exe
 D:\Workspace\THUTAPNHOM\QuanLyBanHang\obj\Debug\QuanLyBanHang.pdb
-D:\Workspace\THUTAPNHOM\QuanLyBanHang\obj\Debug\QuanLyBanHang.UI.UCStaff.resources
-D:\Workspace\THUTAPNHOM\QuanLyBanHang\obj\Debug\QuanLyBanHang.UI.UCCustomer.resources
-D:\Workspace\THUTAPNHOM\QuanLyBanHang\obj\Debug\QuanLyBanHang.GUI.UCStatistic.resources

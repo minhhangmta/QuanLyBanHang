@@ -39,6 +39,8 @@
             this.btnImport = new System.Windows.Forms.ToolStripMenuItem();
             this.btnExport = new System.Windows.Forms.ToolStripMenuItem();
             this.thốngKêToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+
+
             this.tabControl = new System.Windows.Forms.TabControl();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -89,6 +91,7 @@
             this.btnProduct.Name = "btnProduct";
             this.btnProduct.Size = new System.Drawing.Size(137, 22);
             this.btnProduct.Text = "Sản phẩm";
+            this.btnProduct.Click += new System.EventHandler(this.btnProduct_Click);
             // 
             // btnReponsitory
             // 
@@ -136,6 +139,18 @@
             this.thốngKêToolStripMenuItem.Size = new System.Drawing.Size(85, 20);
             this.thốngKêToolStripMenuItem.Text = "Thống kê";
             this.thốngKêToolStripMenuItem.Click += new System.EventHandler(this.thốngKêToolStripMenuItem_Click);
+            // 
+            // tabControl
+            // 
+            this.tabControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControl.DrawMode = System.Windows.Forms.TabDrawMode.OwnerDrawFixed;
+            this.tabControl.Location = new System.Drawing.Point(0, 24);
+            this.tabControl.Name = "tabControl";
+            this.tabControl.SelectedIndex = 0;
+            this.tabControl.Size = new System.Drawing.Size(828, 717);
+            this.tabControl.TabIndex = 1;
+            this.tabControl.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.tabControl_DrawItem);
+            this.tabControl.MouseDown += new System.Windows.Forms.MouseEventHandler(this.tabControl_MouseDown);
             // 
             // tabControl
             // 

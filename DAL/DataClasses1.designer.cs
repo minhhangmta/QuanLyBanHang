@@ -363,7 +363,7 @@ namespace QuanLyBanHang.DAL
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Customer1_Bill", Storage="_Customer", ThisKey="IdCustomer", OtherKey="Id", IsForeignKey=true)]
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Customer_Bill", Storage="_Customer", ThisKey="IdCustomer", OtherKey="Id", IsForeignKey=true)]
 		public Customer Customer
 		{
 			get
@@ -2091,7 +2091,7 @@ namespace QuanLyBanHang.DAL
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Customer1_Bill", Storage="_Bills", ThisKey="Id", OtherKey="IdCustomer")]
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Customer_Bill", Storage="_Bills", ThisKey="Id", OtherKey="IdCustomer")]
 		public EntitySet<Bill> Bills
 		{
 			get

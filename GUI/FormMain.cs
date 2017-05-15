@@ -18,12 +18,18 @@ namespace QuanLyBanHang
         private UCStaff ucStaff;
         private UCCustomer ucCustomer;
         private UCStatistic ucStatistic; 
+
+        private UCProducts ucProducts;
+
+
         public FormMain()
         {
             InitializeComponent();
             ucStaff = new UCStaff();
             ucCustomer = new UCCustomer();
             ucStatistic = new UCStatistic();
+            ucProducts = new UCProducts();
+            
         }
 
         public void AddNewTab(UserControl userControl)
@@ -85,6 +91,10 @@ namespace QuanLyBanHang
         private void thốngKêToolStripMenuItem_Click(object sender, EventArgs e)
         {
             AddNewTab(ucStatistic);
+        }
+        private void btnProduct_Click(object sender, EventArgs e)
+        {
+            AddNewTab(ucProducts);
         }
     }
 }

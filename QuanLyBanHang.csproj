@@ -48,6 +48,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BUS\CustomerBus.cs" />
+    <Compile Include="BUS\ProductsBus.cs" />
     <Compile Include="BUS\StaffBus.cs" />
     <Compile Include="BUS\StallBus.cs" />
     <Compile Include="BUS\StatisticBus.cs" />
@@ -62,11 +63,17 @@
     <Compile Include="GUI\FormMain.Designer.cs">
       <DependentUpon>FormMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\UCStatistic.cs">
+     <Compile Include="GUI\UCStatistic.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="GUI\UCStatistic.Designer.cs">
       <DependentUpon>UCStatistic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\UCProducts.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\UCProducts.Designer.cs">
+      <DependentUpon>UCProducts.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -89,6 +96,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\UCStatistic.resx">
       <DependentUpon>UCStatistic.cs</DependentUpon>
+	</EmbeddedResource>
+    <EmbeddedResource Include="GUI\UCProducts.resx">
+      <DependentUpon>UCProducts.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
