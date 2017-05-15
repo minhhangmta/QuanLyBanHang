@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BUS\ProductsBus.cs" />
     <Compile Include="BUS\StaffBus.cs" />
     <Compile Include="BUS\StallBus.cs" />
     <Compile Include="DAL\DataClasses1.designer.cs">
@@ -58,6 +59,12 @@
     </Compile>
     <Compile Include="GUI\FormMain.Designer.cs">
       <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\UCProducts.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\UCProducts.Designer.cs">
+      <DependentUpon>UCProducts.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -76,6 +83,9 @@
     <Compile Include="Utils\Utils.cs" />
     <EmbeddedResource Include="GUI\FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\UCProducts.resx">
+      <DependentUpon>UCProducts.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

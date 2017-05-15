@@ -12,3 +12,12 @@ D:\Workspace\THUTAPNHOM\QuanLyBanHang\obj\Debug\QuanLyBanHang.UI.UCCustomer.reso
 C:\Users\thuan\Documents\Visual Studio 2015\Projects\QuanLyBanHang\bin\Debug\QuanLyBanHang.exe.config
 C:\Users\thuan\Documents\Visual Studio 2015\Projects\QuanLyBanHang\obj\Debug\QuanLyBanHang.exe
 C:\Users\thuan\Documents\Visual Studio 2015\Projects\QuanLyBanHang\obj\Debug\QuanLyBanHang.pdb
+C:\Users\thuan\Documents\Visual Studio 2015\Projects\QuanLyBanHang\bin\Debug\QuanLyBanHang.exe
+C:\Users\thuan\Documents\Visual Studio 2015\Projects\QuanLyBanHang\bin\Debug\QuanLyBanHang.pdb
+C:\Users\thuan\Documents\Visual Studio 2015\Projects\QuanLyBanHang\obj\Debug\QuanLyBanHang.csprojResolveAssemblyReference.cache
+C:\Users\thuan\Documents\Visual Studio 2015\Projects\QuanLyBanHang\obj\Debug\QuanLyBanHang.FormMain.resources
+C:\Users\thuan\Documents\Visual Studio 2015\Projects\QuanLyBanHang\obj\Debug\QuanLyBanHang.GUI.UCProducts.resources
+C:\Users\thuan\Documents\Visual Studio 2015\Projects\QuanLyBanHang\obj\Debug\QuanLyBanHang.Properties.Resources.resources
+C:\Users\thuan\Documents\Visual Studio 2015\Projects\QuanLyBanHang\obj\Debug\QuanLyBanHang.UI.UCCustomer.resources
+C:\Users\thuan\Documents\Visual Studio 2015\Projects\QuanLyBanHang\obj\Debug\QuanLyBanHang.UI.UCStaff.resources
+C:\Users\thuan\Documents\Visual Studio 2015\Projects\QuanLyBanHang\obj\Debug\QuanLyBanHang.csproj.GenerateResource.Cache
