@@ -59,9 +59,9 @@
             this.btnEditCMS = new System.Windows.Forms.ToolStripMenuItem();
             this.btnDeleteCMS = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnRefesh = new System.Windows.Forms.Button();
             this.txtKeySearch = new System.Windows.Forms.TextBox();
             this.lblResult = new System.Windows.Forms.Label();
-            this.btnRefesh = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgStaff)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
@@ -370,6 +370,16 @@
             this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
             // 
+            // btnRefesh
+            // 
+            this.btnRefesh.Image = global::QuanLyBanHang.Properties.Resources.refresh;
+            this.btnRefesh.Location = new System.Drawing.Point(313, 28);
+            this.btnRefesh.Name = "btnRefesh";
+            this.btnRefesh.Size = new System.Drawing.Size(38, 34);
+            this.btnRefesh.TabIndex = 5;
+            this.btnRefesh.UseVisualStyleBackColor = true;
+            this.btnRefesh.Click += new System.EventHandler(this.btnRefesh_Click);
+            // 
             // txtKeySearch
             // 
             this.txtKeySearch.Location = new System.Drawing.Point(8, 28);
@@ -386,16 +396,6 @@
             this.lblResult.Size = new System.Drawing.Size(13, 13);
             this.lblResult.TabIndex = 3;
             this.lblResult.Text = "0";
-            // 
-            // btnRefesh
-            // 
-            this.btnRefesh.Image = global::QuanLyBanHang.Properties.Resources.refresh;
-            this.btnRefesh.Location = new System.Drawing.Point(313, 28);
-            this.btnRefesh.Name = "btnRefesh";
-            this.btnRefesh.Size = new System.Drawing.Size(38, 34);
-            this.btnRefesh.TabIndex = 5;
-            this.btnRefesh.UseVisualStyleBackColor = true;
-            this.btnRefesh.Click += new System.EventHandler(this.btnRefesh_Click);
             // 
             // UCStaff
             // 

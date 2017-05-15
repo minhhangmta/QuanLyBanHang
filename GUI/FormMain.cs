@@ -1,4 +1,5 @@
-﻿using QuanLyBanHang.UI;
+﻿using QuanLyBanHang.GUI;
+using QuanLyBanHang.UI;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,11 +17,13 @@ namespace QuanLyBanHang
 
         private UCStaff ucStaff;
         private UCCustomer ucCustomer;
+        private UCStatistic ucStatistic; 
         public FormMain()
         {
             InitializeComponent();
             ucStaff = new UCStaff();
             ucCustomer = new UCCustomer();
+            ucStatistic = new UCStatistic();
         }
 
         public void AddNewTab(UserControl userControl)
@@ -72,6 +75,16 @@ namespace QuanLyBanHang
         private void btnCustomer_Click(object sender, EventArgs e)
         {
             AddNewTab(ucCustomer);
+        }
+
+        private void btnStatisByDay_Click(object sender, EventArgs e)
+        {
+            AddNewTab(ucStatistic);
+        }
+
+        private void thốngKêToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AddNewTab(ucStatistic);
         }
     }
 }

@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.tabControl = new System.Windows.Forms.TabControl();
             this.danhMụcToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nhânViênToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnCustomer = new System.Windows.Forms.ToolStripMenuItem();
@@ -40,10 +39,7 @@
             this.btnImport = new System.Windows.Forms.ToolStripMenuItem();
             this.btnExport = new System.Windows.Forms.ToolStripMenuItem();
             this.thốngKêToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnStatisByDay = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnStatisByMonth = new System.Windows.Forms.ToolStripMenuItem();
-            this.theoQuýToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnStatisByYear = new System.Windows.Forms.ToolStripMenuItem();
+            this.tabControl = new System.Windows.Forms.TabControl();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -58,18 +54,6 @@
             this.menuStrip1.Size = new System.Drawing.Size(828, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
-            // 
-            // tabControl
-            // 
-            this.tabControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl.DrawMode = System.Windows.Forms.TabDrawMode.OwnerDrawFixed;
-            this.tabControl.Location = new System.Drawing.Point(0, 24);
-            this.tabControl.Name = "tabControl";
-            this.tabControl.SelectedIndex = 0;
-            this.tabControl.Size = new System.Drawing.Size(828, 717);
-            this.tabControl.TabIndex = 1;
-            this.tabControl.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.tabControl_DrawItem);
-            this.tabControl.MouseDown += new System.Windows.Forms.MouseEventHandler(this.tabControl_MouseDown);
             // 
             // danhMụcToolStripMenuItem
             // 
@@ -87,7 +71,7 @@
             // 
             this.nhânViênToolStripMenuItem.Image = global::QuanLyBanHang.Properties.Resources.staff;
             this.nhânViênToolStripMenuItem.Name = "nhânViênToolStripMenuItem";
-            this.nhânViênToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.nhânViênToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.nhânViênToolStripMenuItem.Text = "Nhân viên";
             this.nhânViênToolStripMenuItem.Click += new System.EventHandler(this.nhânViênToolStripMenuItem_Click);
             // 
@@ -95,7 +79,7 @@
             // 
             this.btnCustomer.Image = global::QuanLyBanHang.Properties.Resources.cusommer;
             this.btnCustomer.Name = "btnCustomer";
-            this.btnCustomer.Size = new System.Drawing.Size(152, 22);
+            this.btnCustomer.Size = new System.Drawing.Size(137, 22);
             this.btnCustomer.Text = "Khách hàng";
             this.btnCustomer.Click += new System.EventHandler(this.btnCustomer_Click);
             // 
@@ -103,14 +87,14 @@
             // 
             this.btnProduct.Image = global::QuanLyBanHang.Properties.Resources.packing;
             this.btnProduct.Name = "btnProduct";
-            this.btnProduct.Size = new System.Drawing.Size(152, 22);
+            this.btnProduct.Size = new System.Drawing.Size(137, 22);
             this.btnProduct.Text = "Sản phẩm";
             // 
             // btnReponsitory
             // 
             this.btnReponsitory.Image = global::QuanLyBanHang.Properties.Resources.Shipping6;
             this.btnReponsitory.Name = "btnReponsitory";
-            this.btnReponsitory.Size = new System.Drawing.Size(152, 22);
+            this.btnReponsitory.Size = new System.Drawing.Size(137, 22);
             this.btnReponsitory.Text = "Kho hàng";
             // 
             // tácVuToolStripMenuItem
@@ -147,43 +131,23 @@
             // 
             // thốngKêToolStripMenuItem
             // 
-            this.thốngKêToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.btnStatisByDay,
-            this.btnStatisByMonth,
-            this.theoQuýToolStripMenuItem,
-            this.btnStatisByYear});
             this.thốngKêToolStripMenuItem.Image = global::QuanLyBanHang.Properties.Resources.chart;
             this.thốngKêToolStripMenuItem.Name = "thốngKêToolStripMenuItem";
             this.thốngKêToolStripMenuItem.Size = new System.Drawing.Size(85, 20);
             this.thốngKêToolStripMenuItem.Text = "Thống kê";
+            this.thốngKêToolStripMenuItem.Click += new System.EventHandler(this.thốngKêToolStripMenuItem_Click);
             // 
-            // btnStatisByDay
+            // tabControl
             // 
-            this.btnStatisByDay.Image = global::QuanLyBanHang.Properties.Resources.calendar_icon_1487803_960_720;
-            this.btnStatisByDay.Name = "btnStatisByDay";
-            this.btnStatisByDay.Size = new System.Drawing.Size(135, 22);
-            this.btnStatisByDay.Text = "Theo ngày";
-            // 
-            // btnStatisByMonth
-            // 
-            this.btnStatisByMonth.Image = global::QuanLyBanHang.Properties.Resources.calendar_selection_day_icon;
-            this.btnStatisByMonth.Name = "btnStatisByMonth";
-            this.btnStatisByMonth.Size = new System.Drawing.Size(135, 22);
-            this.btnStatisByMonth.Text = "Theo tháng";
-            // 
-            // theoQuýToolStripMenuItem
-            // 
-            this.theoQuýToolStripMenuItem.Name = "theoQuýToolStripMenuItem";
-            this.theoQuýToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
-            this.theoQuýToolStripMenuItem.Text = "Theo quý";
-            // 
-            // btnStatisByYear
-            // 
-            this.btnStatisByYear.Image = global::QuanLyBanHang.Properties.Resources.Calender_2017;
-            this.btnStatisByYear.Name = "btnStatisByYear";
-            this.btnStatisByYear.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnStatisByYear.Size = new System.Drawing.Size(135, 22);
-            this.btnStatisByYear.Text = "Theo năm";
+            this.tabControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControl.DrawMode = System.Windows.Forms.TabDrawMode.OwnerDrawFixed;
+            this.tabControl.Location = new System.Drawing.Point(0, 24);
+            this.tabControl.Name = "tabControl";
+            this.tabControl.SelectedIndex = 0;
+            this.tabControl.Size = new System.Drawing.Size(828, 717);
+            this.tabControl.TabIndex = 1;
+            this.tabControl.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.tabControl_DrawItem);
+            this.tabControl.MouseDown += new System.Windows.Forms.MouseEventHandler(this.tabControl_MouseDown);
             // 
             // FormMain
             // 
@@ -218,10 +182,6 @@
         private System.Windows.Forms.ToolStripMenuItem btnExport;
         private System.Windows.Forms.TabControl tabControl;
         private System.Windows.Forms.ToolStripMenuItem thốngKêToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem btnStatisByDay;
-        private System.Windows.Forms.ToolStripMenuItem btnStatisByMonth;
-        private System.Windows.Forms.ToolStripMenuItem theoQuýToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem btnStatisByYear;
     }
 }
 

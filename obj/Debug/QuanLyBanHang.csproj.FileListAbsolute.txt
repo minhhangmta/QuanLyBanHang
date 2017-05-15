@@ -9,3 +9,4 @@ D:\Workspace\THUTAPNHOM\QuanLyBanHang\obj\Debug\QuanLyBanHang.exe
 D:\Workspace\THUTAPNHOM\QuanLyBanHang\obj\Debug\QuanLyBanHang.pdb
 D:\Workspace\THUTAPNHOM\QuanLyBanHang\obj\Debug\QuanLyBanHang.UI.UCStaff.resources
 D:\Workspace\THUTAPNHOM\QuanLyBanHang\obj\Debug\QuanLyBanHang.UI.UCCustomer.resources
+D:\Workspace\THUTAPNHOM\QuanLyBanHang\obj\Debug\QuanLyBanHang.GUI.UCStatistic.resources
