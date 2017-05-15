@@ -344,5 +344,12 @@ namespace QuanLyBanHang.UI
             lblResult.Text = result.Rows.Count.ToString();
             dtgStaff.DataSource = result;
         }
+
+        private void btnRefesh_Click(object sender, EventArgs e)
+        {
+            LoadData();
+            txtKeySearch.Text = "";
+            lblResult.Text = "";
+        }
     }
 }
