@@ -215,5 +215,10 @@ namespace QuanLyBanHang.UI
             btnSave.Enabled = true;
             btnCancel.Enabled = true;
         }
+
+        private void btnEditCMS_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

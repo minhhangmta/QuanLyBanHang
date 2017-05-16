@@ -53,8 +53,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.rbtMale = new System.Windows.Forms.RadioButton();
             this.rbtFemal = new System.Windows.Forms.RadioButton();
+            this.rbtMale = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnRefesh = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
@@ -72,15 +72,16 @@
             // 
             this.btnDeleteCMS.Image = global::QuanLyBanHang.Properties.Resources.delete;
             this.btnDeleteCMS.Name = "btnDeleteCMS";
-            this.btnDeleteCMS.Size = new System.Drawing.Size(96, 22);
+            this.btnDeleteCMS.Size = new System.Drawing.Size(152, 22);
             this.btnDeleteCMS.Text = "Xóa";
             // 
             // btnEditCMS
             // 
             this.btnEditCMS.Image = global::QuanLyBanHang.Properties.Resources.edit;
             this.btnEditCMS.Name = "btnEditCMS";
-            this.btnEditCMS.Size = new System.Drawing.Size(96, 22);
+            this.btnEditCMS.Size = new System.Drawing.Size(152, 22);
             this.btnEditCMS.Text = "Sửa ";
+            this.btnEditCMS.Click += new System.EventHandler(this.btnEditCMS_Click);
             // 
             // contextMenuStrip1
             // 
@@ -88,7 +89,7 @@
             this.btnEditCMS,
             this.btnDeleteCMS});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(97, 48);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(153, 70);
             // 
             // dtpBirthDay
             // 
@@ -311,6 +312,17 @@
             this.groupBox2.TabIndex = 37;
             this.groupBox2.TabStop = false;
             // 
+            // rbtFemal
+            // 
+            this.rbtFemal.AutoSize = true;
+            this.rbtFemal.Enabled = false;
+            this.rbtFemal.Location = new System.Drawing.Point(81, 16);
+            this.rbtFemal.Name = "rbtFemal";
+            this.rbtFemal.Size = new System.Drawing.Size(39, 17);
+            this.rbtFemal.TabIndex = 1;
+            this.rbtFemal.Text = "Nữ";
+            this.rbtFemal.UseVisualStyleBackColor = true;
+            // 
             // rbtMale
             // 
             this.rbtMale.AutoSize = true;
@@ -323,17 +335,6 @@
             this.rbtMale.TabStop = true;
             this.rbtMale.Text = "Nam";
             this.rbtMale.UseVisualStyleBackColor = true;
-            // 
-            // rbtFemal
-            // 
-            this.rbtFemal.AutoSize = true;
-            this.rbtFemal.Enabled = false;
-            this.rbtFemal.Location = new System.Drawing.Point(81, 16);
-            this.rbtFemal.Name = "rbtFemal";
-            this.rbtFemal.Size = new System.Drawing.Size(39, 17);
-            this.rbtFemal.TabIndex = 1;
-            this.rbtFemal.Text = "Nữ";
-            this.rbtFemal.UseVisualStyleBackColor = true;
             // 
             // groupBox1
             // 

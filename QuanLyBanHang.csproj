@@ -47,6 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BUS\BillBus.cs" />
     <Compile Include="BUS\CustomerBus.cs" />
     <Compile Include="BUS\ProductsBus.cs" />
     <Compile Include="BUS\StaffBus.cs" />
@@ -63,7 +64,13 @@
     <Compile Include="GUI\FormMain.Designer.cs">
       <DependentUpon>FormMain.cs</DependentUpon>
     </Compile>
-     <Compile Include="GUI\UCStatistic.cs">
+    <Compile Include="GUI\UCBill.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\UCBill.Designer.cs">
+      <DependentUpon>UCBill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\UCStatistic.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="GUI\UCStatistic.Designer.cs">
@@ -94,9 +101,12 @@
     <EmbeddedResource Include="GUI\FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\UCBill.resx">
+      <DependentUpon>UCBill.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\UCStatistic.resx">
       <DependentUpon>UCStatistic.cs</DependentUpon>
-	</EmbeddedResource>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\UCProducts.resx">
       <DependentUpon>UCProducts.cs</DependentUpon>
     </EmbeddedResource>

@@ -39,8 +39,6 @@
             this.btnImport = new System.Windows.Forms.ToolStripMenuItem();
             this.btnExport = new System.Windows.Forms.ToolStripMenuItem();
             this.thốngKêToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-
-
             this.tabControl = new System.Windows.Forms.TabControl();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -73,7 +71,7 @@
             // 
             this.nhânViênToolStripMenuItem.Image = global::QuanLyBanHang.Properties.Resources.staff;
             this.nhânViênToolStripMenuItem.Name = "nhânViênToolStripMenuItem";
-            this.nhânViênToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.nhânViênToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.nhânViênToolStripMenuItem.Text = "Nhân viên";
             this.nhânViênToolStripMenuItem.Click += new System.EventHandler(this.nhânViênToolStripMenuItem_Click);
             // 
@@ -81,7 +79,7 @@
             // 
             this.btnCustomer.Image = global::QuanLyBanHang.Properties.Resources.cusommer;
             this.btnCustomer.Name = "btnCustomer";
-            this.btnCustomer.Size = new System.Drawing.Size(137, 22);
+            this.btnCustomer.Size = new System.Drawing.Size(152, 22);
             this.btnCustomer.Text = "Khách hàng";
             this.btnCustomer.Click += new System.EventHandler(this.btnCustomer_Click);
             // 
@@ -89,7 +87,7 @@
             // 
             this.btnProduct.Image = global::QuanLyBanHang.Properties.Resources.packing;
             this.btnProduct.Name = "btnProduct";
-            this.btnProduct.Size = new System.Drawing.Size(137, 22);
+            this.btnProduct.Size = new System.Drawing.Size(152, 22);
             this.btnProduct.Text = "Sản phẩm";
             this.btnProduct.Click += new System.EventHandler(this.btnProduct_Click);
             // 
@@ -97,7 +95,7 @@
             // 
             this.btnReponsitory.Image = global::QuanLyBanHang.Properties.Resources.Shipping6;
             this.btnReponsitory.Name = "btnReponsitory";
-            this.btnReponsitory.Size = new System.Drawing.Size(137, 22);
+            this.btnReponsitory.Size = new System.Drawing.Size(152, 22);
             this.btnReponsitory.Text = "Kho hàng";
             // 
             // tácVuToolStripMenuItem
@@ -115,21 +113,22 @@
             // 
             this.btnBill.Image = global::QuanLyBanHang.Properties.Resources.Sales_by_Payment_Method_rep;
             this.btnBill.Name = "btnBill";
-            this.btnBill.Size = new System.Drawing.Size(134, 22);
+            this.btnBill.Size = new System.Drawing.Size(152, 22);
             this.btnBill.Text = "Hóa đơn";
+            this.btnBill.Click += new System.EventHandler(this.btnBill_Click);
             // 
             // btnImport
             // 
             this.btnImport.Image = global::QuanLyBanHang.Properties.Resources.move_file_arrow_import_left_document;
             this.btnImport.Name = "btnImport";
-            this.btnImport.Size = new System.Drawing.Size(134, 22);
+            this.btnImport.Size = new System.Drawing.Size(152, 22);
             this.btnImport.Text = "Phiếu nhập";
             // 
             // btnExport
             // 
             this.btnExport.Image = global::QuanLyBanHang.Properties.Resources.export;
             this.btnExport.Name = "btnExport";
-            this.btnExport.Size = new System.Drawing.Size(134, 22);
+            this.btnExport.Size = new System.Drawing.Size(152, 22);
             this.btnExport.Text = "Phiếu xuất";
             // 
             // thốngKêToolStripMenuItem
@@ -139,18 +138,6 @@
             this.thốngKêToolStripMenuItem.Size = new System.Drawing.Size(85, 20);
             this.thốngKêToolStripMenuItem.Text = "Thống kê";
             this.thốngKêToolStripMenuItem.Click += new System.EventHandler(this.thốngKêToolStripMenuItem_Click);
-            // 
-            // tabControl
-            // 
-            this.tabControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl.DrawMode = System.Windows.Forms.TabDrawMode.OwnerDrawFixed;
-            this.tabControl.Location = new System.Drawing.Point(0, 24);
-            this.tabControl.Name = "tabControl";
-            this.tabControl.SelectedIndex = 0;
-            this.tabControl.Size = new System.Drawing.Size(828, 717);
-            this.tabControl.TabIndex = 1;
-            this.tabControl.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.tabControl_DrawItem);
-            this.tabControl.MouseDown += new System.Windows.Forms.MouseEventHandler(this.tabControl_MouseDown);
             // 
             // tabControl
             // 

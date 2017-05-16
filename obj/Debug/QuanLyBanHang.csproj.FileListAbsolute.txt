@@ -10,3 +10,5 @@ D:\Workspace\THUTAPNHOM\QuanLyBanHang\obj\Debug\QuanLyBanHang.UI.UCStaff.resourc
 D:\Workspace\THUTAPNHOM\QuanLyBanHang\obj\Debug\QuanLyBanHang.csproj.GenerateResource.Cache
 D:\Workspace\THUTAPNHOM\QuanLyBanHang\obj\Debug\QuanLyBanHang.exe
 D:\Workspace\THUTAPNHOM\QuanLyBanHang\obj\Debug\QuanLyBanHang.pdb
+D:\Workspace\THUTAPNHOM\QuanLyBanHang\obj\Debug\QuanLyBanHang.csprojResolveAssemblyReference.cache
+D:\Workspace\THUTAPNHOM\QuanLyBanHang\obj\Debug\QuanLyBanHang.GUI.UCBill.resources

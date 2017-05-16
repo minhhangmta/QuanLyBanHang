@@ -17,8 +17,8 @@ namespace QuanLyBanHang
 
         private UCStaff ucStaff;
         private UCCustomer ucCustomer;
-        private UCStatistic ucStatistic; 
-
+        private UCStatistic ucStatistic;
+        private UCBill ucBill;
         private UCProducts ucProducts;
 
 
@@ -29,6 +29,7 @@ namespace QuanLyBanHang
             ucCustomer = new UCCustomer();
             ucStatistic = new UCStatistic();
             ucProducts = new UCProducts();
+            ucBill = new UCBill();
             
         }
 
@@ -95,6 +96,11 @@ namespace QuanLyBanHang
         private void btnProduct_Click(object sender, EventArgs e)
         {
             AddNewTab(ucProducts);
+        }
+
+        private void btnBill_Click(object sender, EventArgs e)
+        {
+            AddNewTab(ucBill);
         }
     }
 }
